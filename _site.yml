@@ -1,0 +1,9 @@
+output_dir: "."
+navbar:
+    title: "Initial Practical Work"
+    left:
+      - text: "Home"
+        href: index.html
+    right:
+      - text: "Contact"
+        href: contact.html
