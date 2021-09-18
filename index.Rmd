@@ -15,8 +15,10 @@ Entre las sustancias que permiten a las plantas resistir enfermedades se encuent
 Para analizar la secuencia, y buscar los alineamientos se utilizó la herramienta Blast dando como resultado:
 
 ```{r blast, echo=FALSE, fig.cap="A caption", out.width = '50%', fig.align='center'}
-library(prettydoc)
+library(knitr)
+library(gridExtra)
 knitr::include_graphics("C:/Users/Usuario/Desktop/Timo Facu/Segundo año/2ndo Cuatri/Bioinformatica/initialpracticalwork.github.io/index_files/figure-html/Blast.png")
+
 ```
 
 Luego de ver las alternativas, clickeamos en la alternativa con 100% de Querry Cover, a continuación buscamos la características de ese gen dando como resultado:
@@ -24,6 +26,7 @@ Luego de ver las alternativas, clickeamos en la alternativa con 100% de Querry C
 Pegar Foto Proteína
 
 En Rojo se puede identificar el organismo del cual proviene, este es un tipo de maiz
+
 ### a) ¿Qué significa el alineamiento? ¿Cómo se ve si clickeas en proteínas con menor porcentaje de identidad?
 Alineamiento implica la comparación de dos secuencias relacionadas, en búsqueda de encontrar similitudes entre las mismas y posibles mutaciones que podrían remarcar un significado funcional y evolutivo entre ambos genes. En caso de clickear una proteína con menor porcentaje de identidad se observan gaps o nucleótidos no coincidentes en la secuencia query , debido a que no tiene 100% de identidad.
 
