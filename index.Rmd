@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Initial Practical Work"
 output: 
   html_document:
     theme: yeti
