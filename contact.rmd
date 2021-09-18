@@ -3,3 +3,11 @@ title: "contact"
 output: html_document
 ---
 
+Timoteo Sanchez Varsallona
+timoteo.sanchez@ing.austral.edu.ar
+
+Pablo Villani
+pablo.villani@ing.austral.edu.ar
+
+Lautaro Orlando
+lautaro.orlando@ing.austral.edu.ar

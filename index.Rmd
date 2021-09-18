@@ -8,23 +8,53 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+#Initial Practical Work
 
-## R Markdown
+##1) Cómo identificar y caracterizar un gen a partir de su secuencia de ADN
+Entre las sustancias que permiten a las plantas resistir enfermedades se encuentran los fenilpropanoides. En un estudio de plantas de maíz sensibles a ciertas enfermedades se encontró que algunas eran incapaces de sintetizar ácido cumárico. Recibimos una secuencia de ADN de una planta resistente a dichas enfermedades.
+Para analizar la secuencia, y buscar los alineamientos se utilizo la herramienta Blast dando como resultado:
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r blast, echo=FALSE, fig.cap="A caption", out.width = '50%', fig.align='center'}
+library(prettydoc)
+knitr::include_graphics("C:/Users/Usuario/Desktop/Timo Facu/Segundo año/2ndo Cuatri/Bioinformatica/initialpracticalwork.github.io/index_files/figure-html/Blast.png")
 ```
 
-## Including Plots
+Luego de ver las alternativas, clickeamos en la alternativa con 100% de Querry Cover, a continuacion buscamos la caracteristicas de ese gen dando como resultado:
 
-You can also embed plots, for example:
+Pegar Foto Proteina
+
+En Rojo se puede identificar el organismo del cual proviene, este es un tipo de maiz
+a) ¿Qué significa el alineamiento? ¿Cómo se ve si clickeás en proteínas con menor porcentaje de identidad?
+Alineamiento implica la comparación de dos secuencias relacionadas, en búsqueda de encontrar similitudes entre las mismas y posibles mutaciones que podrían remarcar un significado funcional y evolutivo entre ambos genes. En caso de clickear una proteína con menor porcentaje de identidad se observan gaps o nucleotidos no coincidentes en la secuencia query , debido a que no tiene 100% de identidad.
+
+b) ¿Qué proteína es?
+Fenilalanina amonio-liasa
+
+pegar foto proteina 3d
+
+c) ¿Por qué la CDS es más chica que la región abarcada por el exón?
+La CDS (región de codificacion) es mas chica porque este toma desde el primer codón codificante a metionina hasta el primer codón stop. Además el cds contiene aminoácidos, los cuales son codificados de a codones con 3 nucleotidos.
+
+d) ¿Dónde están los codones de iniciación y de terminación?
+Son los determinados por el CDS. El codón de iniciación se encuentra desde el nucleótido 122 a 124 y el de terminación desde el nucleótido 2270 a 2272
+
+
+Luego ingresamos en Uniprot, insertamos el código de locus en el buscador y nos encontramos con la proteina fenilalanina amonio liasa, la cual es una enzima involucrada en el metabolismo de los fenilpropanoides. El proceso biologico mas importante del gen es la biosintesis del acido cinámico. Al abrir la pagina de las interacciones con otras proteinas nos interesamos por la proteina 4-coumarate--CoA ligase 1, ya que tiene altas probabilidades de expresarse al mismo tiempo que el gen que estamos investigando. Ademas esta involucrada en el metabolismo de los fenilpropanoides.
+
+Insertar imagen de Interaction
+
+A continuacion utlizaremos la pagina KEGG PATHWAY Database, para encontrar la ruta metabolica correspondiente a la biosintesis de fenilpropaniodes. En la imagen se pueden ver diferentes enzimas, nos sentraremos en la 4.3.1.24 que es la enzima en cuestion. Mientras que la enzima 4.3.1.25 es una enzima muy parecida la fenilalanina/tirosina amonia liasa, esta por lo que se puede ver en la ruta metabolica se utiliza para producir acido cumerico a partir de tirosina y luego tiene la mima actividad enzimatica que la enzima fenilalanina amonio liasa.
+
+Insertar imagen Metabolico
+
+La planta de este estudio era incapaz de sintetizar acido cumarico debido a que tenia alguna mutacion en el gen que codificaba a la enzima fenilalanina amonio ligasa, esto producia un defecto en la sintesis de ácido cinámico y por lo tanto no se produciria ácido cúmerico
+
+2) Cómo encontrar secuencias de ADN de genes de interés
+
+
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
