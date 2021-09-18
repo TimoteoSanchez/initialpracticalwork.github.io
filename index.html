@@ -263,24 +263,50 @@ $(document).ready(function () {
 </div>
 
 
-<p>#Initial Practical Work</p>
-<p>##1) Cómo identificar y caracterizar un gen a partir de su secuencia de ADN Entre las sustancias que permiten a las plantas resistir enfermedades se encuentran los fenilpropanoides. En un estudio de plantas de maíz sensibles a ciertas enfermedades se encontró que algunas eran incapaces de sintetizar ácido cumárico. Recibimos una secuencia de ADN de una planta resistente a dichas enfermedades. Para analizar la secuencia, y buscar los alineamientos se utilizo la herramienta Blast dando como resultado:</p>
+<div id="initial-practical-work" class="section level1">
+<h1>Initial Practical Work</h1>
+<div id="cómo-identificar-y-caracterizar-un-gen-a-partir-de-su-secuencia-de-adn" class="section level2">
+<h2>1) Cómo identificar y caracterizar un gen a partir de su secuencia de ADN</h2>
+<p>Entre las sustancias que permiten a las plantas resistir enfermedades se encuentran los fenilpropanoides. En un estudio de plantas de maíz sensibles a ciertas enfermedades se encontró que algunas eran incapaces de sintetizar ácido cumárico. Recibimos una secuencia de ADN de una planta resistente a dichas enfermedades. Para analizar la secuencia, y buscar los alineamientos se utilizó la herramienta Blast dando como resultado:</p>
 <div class="figure" style="text-align: center">
 <img src="C:/Users/Usuario/Desktop/Timo Facu/Segundo año/2ndo Cuatri/Bioinformatica/initialpracticalwork.github.io/index_files/figure-html/Blast.png" alt="A caption" width="50%" />
 <p class="caption">
 A caption
 </p>
 </div>
-<ol style="list-style-type: lower-alpha">
-<li>¿Qué significa el alineamiento? ¿Cómo se ve si clickeás en proteínas con menor porcentaje de identidad?</li>
-<li>¿Qué proteína es?</li>
-<li>¿Por qué la CDS es más chica que la región abarcada por el exón?</li>
-<li>¿Dónde están los codones de iniciación y de terminación?</li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li>Cómo encontrar secuencias de ADN de genes de interés</li>
-</ol>
-<p><img src="index_files/figure-html/pressure-1.png" width="672" /></p>
+<p>Luego de ver las alternativas, clickeamos en la alternativa con 100% de Querry Cover, a continuación buscamos la características de ese gen dando como resultado:</p>
+<p>Pegar Foto Proteína</p>
+<p>En Rojo se puede identificar el organismo del cual proviene, este es un tipo de maiz ### a) ¿Qué significa el alineamiento? ¿Cómo se ve si clickeas en proteínas con menor porcentaje de identidad? Alineamiento implica la comparación de dos secuencias relacionadas, en búsqueda de encontrar similitudes entre las mismas y posibles mutaciones que podrían remarcar un significado funcional y evolutivo entre ambos genes. En caso de clickear una proteína con menor porcentaje de identidad se observan gaps o nucleótidos no coincidentes en la secuencia query , debido a que no tiene 100% de identidad.</p>
+<div id="b-qué-proteína-es" class="section level3">
+<h3>b) ¿Qué proteína es?</h3>
+<p>Fenilalanina amonio-liasa</p>
+<p>pegar foto proteína 3d</p>
+</div>
+<div id="c-por-qué-la-cds-es-más-chica-que-la-región-abarcada-por-el-exón" class="section level3">
+<h3>c) ¿Por qué la CDS es más chica que la región abarcada por el exón?</h3>
+<p>La CDS (región de codificación) es más chica porque este toma desde el primer codón codificante a metionina hasta el primer codón stop. Además el cds contiene aminoácidos, los cuales son codificados de a codones con 3 nucleótidos.</p>
+</div>
+<div id="d-dónde-están-los-codones-de-iniciación-y-de-terminación" class="section level3">
+<h3>d) ¿Dónde están los codones de iniciación y de terminación?</h3>
+<p>Son los determinados por el CDS. El codón de iniciación se encuentra desde el nucleótido 122 a 124 y el de terminación desde el nucleótido 2270 a 2272</p>
+<p>Luego ingresamos en Uniprot, insertamos el código de locus en el buscador y nos encontramos con la proteína fenilalanina amonio liasa, la cual es una enzima involucrada en el metabolismo de los fenilpropanoides. El proceso biológico más importante del gen es la biosíntesis del ácido cinámico. Al abrir la página de las interacciones con otras proteínas nos interesamos por la proteína 4-coumarate–CoA ligase 1, ya que tiene altas probabilidades de expresarse al mismo tiempo que el gen que estamos investigando. Además está involucrada en el metabolismo de los fenilpropanoides.</p>
+<p>Insertar imagen de Interaction</p>
+<p>A continuación utilizaremos la página KEGG PATHWAY Database, para encontrar la ruta metabólica correspondiente a la biosíntesis de fenilpropanoides. En la imagen se pueden ver diferentes enzimas, nos centraremos en la 4.3.1.24 que es la enzima en cuestión. Mientras que la enzima 4.3.1.25 es una enzima muy parecida la fenilalanina/tirosina amonia liasa, esta por lo que se puede ver en la ruta metabólica se utiliza para producir acido cumerico a partir de tirosina y luego tiene la misma actividad enzimática que la enzima fenilalanina amonio liasa.</p>
+<p>Insertar imagen Metabólico</p>
+<p>La planta de este estudio era incapaz de sintetizar ácido cumarico debido a que tenía alguna mutación en el gen que codificaba a la enzima fenilalanina amonio ligasa, esto producia un defecto en la síntesis de ácido cinámico y por lo tanto no se producirá ácido cúmerico. Otras sustancias que podrían estar ausentes serían la fenilalanina</p>
+</div>
+</div>
+<div id="cómo-encontrar-secuencias-de-adn-de-genes-de-interés" class="section level2">
+<h2>2) Cómo encontrar secuencias de ADN de genes de interés</h2>
+<p>Para encontrar secuencias de interes, se entra en la pagina de NCBI y en la seccion Gene. Se busca “Pr-1 soybeam”. De las opciones presentes elegimos la PRI-9. Al entrar al la pagina del gen, se busca genomic regions, transcrips and products, y se clickea en la primer banda verde. Se abren dos lineas adicionales, la violeta representa el ARNm, mientras que la roja representa a la proteina.</p>
+<p>Pegar ARN</p>
+<p>Luego se baja en la pagina hasta encontrar mRNA and Protein(s), allí si cliqueamos en la proteina, podemos encontrar que esta tiene un peptido señal mostrado en la imagen a continuacion.</p>
+<p>Imagen Peptido señal</p>
+<p>Un péptido señal está constituido por entre 5 y 30 aminoácidos colocados en un orden particular. El péptido señal decide sobre el destino, la ruta de transporte y la eficiencia de secreción de una proteína. Esta proteina se llama precursora ya que es la encargada de inicializar los procesos de defensa de Heterodera glycines. Al buscar la proteína en Uniprot nos encontramos que esta esta en el espacio extracelular de la celula, por l tanto el peptido señal encamina a la proteina al exterior.</p>
+<p>En el gen del chitinase, del tomate se pueden observar intrones dentro de la secuencia de ADN. Estos espacios que se ven se procesan durante la maduracion del ARN en un proceso llamado splicing, este consite de la maduración por corte y empalme del ARN. Además de la eliminación de secuencias intrónicas que son escindidas del transcrito de ARN y el empalmado de los exones.</p>
+<p>Imagen ARN Tomate</p>
+</div>
+</div>
 
 
 
