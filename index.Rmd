@@ -8,7 +8,6 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# Initial Practical Work
 
 ## 1) Cómo identificar y caracterizar un gen a partir de su secuencia de ADN
 Entre las sustancias que permiten a las plantas resistir enfermedades se encuentran los fenilpropanoides. En un estudio de plantas de maíz sensibles a ciertas enfermedades se encontró que algunas eran incapaces de sintetizar ácido cumárico. Recibimos una secuencia de ADN de una planta resistente a dichas enfermedades.
